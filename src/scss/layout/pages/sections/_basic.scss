@@ -1,0 +1,51 @@
+.basic {
+  .container {
+    max-width: 1920px;
+    padding: 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+    margin-top: -75px;
+    padding: 0 47px 105px;
+    border-radius: 50px 50px 0 0;
+    background:  rgba(243, 244, 247, 1) url('../assets/images/page/home/bubles.png') no-repeat;
+  }
+
+  &__title {
+    padding-top: 78px;
+    padding-bottom: 50px;
+  }
+
+  &-working {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 93px 20px;
+
+    &__item {
+      display: flex;
+      gap: 18px;
+
+
+      &:last-child {
+        grid-column: 3/5;
+      }
+    }
+
+    &__title {
+      color: $link-hover-color;
+      font-weight: 700;
+      font-size: 36px;
+      font-family: $font-title;
+      line-height: 41.04px;
+      letter-spacing: 0.03em;
+    }
+
+    &__text {
+      padding-top: 8px;
+      font-weight: 400;
+      line-height: 23.6px;
+    }
+  }
+}

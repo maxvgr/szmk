@@ -10,4 +10,13 @@
   &__title {
 
   }
+
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    font-family: $font-title;
+    line-height: 45.6px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
 }

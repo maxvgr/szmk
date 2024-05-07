@@ -2,12 +2,17 @@
 // В этом файле подключаются все шрифты через font-face, и задаются основные настройки типографики
 // -----------------------------------------------------------------------------
 
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Light", 300);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Regular", 400);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Medium", 500);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Bold", 700);
+@include font-face("GothamPro", "../assets/fonts/GothamPro/Gothampro-Light", 300);
+@include font-face("GothamPro", "../assets/fonts/GothamPro/Gothampro-Regular", 400);
+@include font-face("GothamPro", "../assets/fonts/GothamPro/Gothampro-Medium", 500);
+@include font-face("GothamPro", "../assets/fonts/GothamPro/Gothampro-Bold", 700);
 
-$font-default: "Roboto", sans-serif; // Семейство по умолчанию
+@include font-face("MagistralCTT", "../assets/fonts/MagistralCTT/MagistralCTT-Regular", 400);
+@include font-face("MagistralCTT", "../assets/fonts/MagistralCTT/MagistralCTT-Bold", 700);
+
+
+$font-default: "GothamPro", sans-serif; // Семейство по умолчанию
+$font-title: "MagistralCTT", sans-serif; // Семейство по умолчанию
 
 /* Размеры заголовков */
 $font__title--large: 64px;

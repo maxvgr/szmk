@@ -1,0 +1,42 @@
+#slider {
+  .container {
+    // max-width: 100%;
+
+    max-width: 1920px;
+    padding: 0;
+  }
+}
+
+.slider {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    top: 30%;
+    left: 160px;
+    width: 700px;
+
+    .button {
+      margin-top: 39px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 22px;
+    color: $color-text__white;
+    font-weight: 700;
+    font-size: 58px;
+    font-family: $font-title;
+    line-height: 64.38px;
+    letter-spacing: 0.03em;
+  }
+
+  &__text {
+    color: $color-text__white;
+    font-size: 20px;
+    line-height: 29.6px;
+  }
+
+}

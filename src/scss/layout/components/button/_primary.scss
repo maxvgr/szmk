@@ -1,2 +1,16 @@
 .button-primary {
+  @include breakpoint($breakpoint-mobile) {
+    padding: 10px 15px;
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+
+  padding: 10px 30px;
+  border-radius: 10px;
+  background: rgba(241, 194, 50, 1);
+  transition: $transition-time ease;
+
+  &:hover {
+    color: $color-text__white;
+  }
 }

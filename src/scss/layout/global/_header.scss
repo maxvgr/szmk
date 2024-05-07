@@ -3,9 +3,93 @@
 // -----------------------------------------------------------------------------
 
 #header {
+  .container {
+    @include breakpoint($breakpoint-laptop) {
+      padding: 10px 50px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding: 10px 20px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding: 10px 15px;
+    }
 
+    max-width: 1600px;
+    padding: 10px 0;
+  }
 }
 
 .header {
+  &__wrapper {
+    @include breakpoint($breakpoint-laptop) {
+      grid-template-columns: 2.2fr 3.8fr 70px 1fr;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 3fr 70px 1fr 70px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 3fr 70px 70px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      grid-template-columns: 1fr 50px 50px;
+    }
 
+    display: grid;
+    grid-template-columns: 1.6fr 4fr 70px 1fr;
+    align-items: center;
+  }
+
+  &__logo {
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 14.4px;
+
+      a {
+        gap: 10px;
+      }
+
+      img {
+        width: 88px;
+      }
+    }
+  }
+
+  &__menu {
+    @include breakpoint($breakpoint-notebook) {
+      display: none;
+    }
+
+    justify-self: center;
+  }
+
+  &__search {
+    justify-self: center;
+  }
+
+  &__contacts {
+    @include breakpoint($breakpoint-tablet) {
+      flex-direction: row;
+      grid-row: 2/3;
+      grid-column: 1/4;
+      justify-self: center;
+      padding: 6px 0;
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    justify-self: right;
+  }
+
+  &__burger {
+    @include breakpoint($breakpoint-notebook) {
+      display: block;
+    }
+
+    display: none;
+    justify-self: center;
+  }
 }

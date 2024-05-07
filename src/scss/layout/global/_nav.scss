@@ -4,23 +4,46 @@
 
 .nav {
   &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 38px;
+    justify-content: center;
   }
 
   &__item {
+    &.current > a {
+      color: $link-hover-color;
+    }
   }
 
   &__link {
+    white-space: nowrap;
+    transition: $transition-time ease;
+
+    &:hover {
+      color: $link-hover-color;
+    }
   }
-
-
 
   &--header {
     .nav__item {
-
     }
 
     .nav__link {
+    }
+  }
 
+  &--footer {
+    .nav__list {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .nav__item {
+    }
+
+    .nav__link {
+      white-space: wrap;
     }
   }
 }

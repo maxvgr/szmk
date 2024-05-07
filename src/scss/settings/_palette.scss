@@ -3,11 +3,12 @@ $palette-white: #ffffff;
 $palette-black: #000000;
 
 // Цветовая палитра текста
-$color-text__primary: #000000;
+$color-text__primary: rgba(78, 78, 78, 1);
 $color-text__black: #000000;
 $color-text__white: #ffffff;
+$color-text__grey: rgba(149, 149, 149, 1);
 
-$link-hover-color: #60d2ff !default;
+$link-hover-color: rgba(15, 130, 152, 1) !default;
 
 body {
   color: $color-text__primary;
