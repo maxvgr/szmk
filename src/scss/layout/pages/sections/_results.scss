@@ -1,0 +1,56 @@
+.results {
+  .container {
+    max-width: 1920px;
+    padding: 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: -1;
+    margin-top: -50px;
+    padding: 88px 160px 0;
+    border-radius: 50px 50px 0 0;
+    background-color: rgba(243, 244, 247, 1);
+    background-image: url("../assets/images/page/home/yellow-bubl.png"), url("../assets/images/page/home/blue-bubl.png");
+    background-position: bottom -450px left 10%, top -250px right 0;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  &__title {
+    padding-bottom: 67px;
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 33px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  &__number {
+    color: $color-text__blue;
+    font-size: 72px;
+    line-height: 84.96px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 25.74px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    padding: 39px 0 50px;
+  }
+}

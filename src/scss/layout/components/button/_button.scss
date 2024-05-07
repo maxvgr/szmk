@@ -17,3 +17,10 @@
     pointer-events: none;
   }
 }
+
+.input {
+  padding: 20px 30px;
+  border-radius: 10px;
+  outline: none;
+  background: $palette-white;
+}
