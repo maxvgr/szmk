@@ -5,6 +5,8 @@
   }
 
   &__wrapper {
+    position: relative;
+    z-index: 5;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 0.5fr;
     gap: 15px;

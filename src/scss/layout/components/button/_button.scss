@@ -18,8 +18,9 @@
   }
 }
 
-.input {
+.input, textarea {
   padding: 20px 30px;
+  border: none;
   border-radius: 10px;
   outline: none;
   background: $palette-white;
