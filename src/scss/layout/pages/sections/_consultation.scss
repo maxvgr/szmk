@@ -11,13 +11,15 @@
     padding: 64px 356px;
     border-radius: 50px 50px 0 0;
     background-color: $palette-blue;
-    background-image: url("../assets/images/page/home/bg-green-list.png"), url("../assets/images/page/home/blue-bubl-consult-up.png"),  url("../assets/images/page/home/blue-bubl-consult.png");
+    background-image: url("../assets/images/page/home/bg-green-list.png"),
+      url("../assets/images/page/home/blue-bubl-consult-up.png"),
+      url("../assets/images/page/home/blue-bubl-consult.png");
     background-position: bottom 50px left 53%, bottom 0 left 75%, bottom 0 left 75%;
     background-repeat: no-repeat, no-repeat, no-repeat;
     color: $color-text__white;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       z-index: 20;
       bottom: 0;
@@ -25,12 +27,13 @@
       width: 360px;
       height: 630px;
       background-image: url("../assets/images/page/home/consult.png");
-    background-position: bottom 0 left 0;
-    background-repeat: no-repeat;
+      background-position: bottom 0 left 0;
+      background-repeat: no-repeat;
     }
   }
 
-  &__title, h2 {
+  &__title,
+  h2 {
     padding-bottom: 12px;
     color: $color-text__white;
     text-align: left;
@@ -42,7 +45,8 @@
     gap: 12px;
     width: 480px;
 
-    .input, textarea {
+    .input,
+    textarea {
       width: 100%;
     }
 
@@ -65,5 +69,4 @@
       }
     }
   }
-
 }

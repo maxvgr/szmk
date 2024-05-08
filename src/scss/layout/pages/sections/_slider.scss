@@ -1,6 +1,7 @@
 #slider {
   .container {
-    // max-width: 100%;
+    @include breakpoint($breakpoint-laptop-big) {
+    }
 
     max-width: 1920px;
     padding: 0;
@@ -10,20 +11,87 @@
 .slider {
   &__wrapper {
     position: relative;
+
+    &::after {
+      @include breakpoint($breakpoint-laptop-big) {
+        right: 0;
+        background-image: url("../assets/images/page/home/people-1400.png");
+      }
+      @include breakpoint($breakpoint-notebook-big) {
+        background-image: url("../assets/images/page/home/people-768.png");
+      }
+      @include breakpoint($breakpoint-tablet) {
+        background-image: url("../assets/images/page/home/people-360.png");
+      }
+
+      content: "";
+      position: absolute;
+      z-index: 0;
+      right: 80px;
+      bottom: 50px;
+      width: 703px;
+      height: 616px;
+      background-image: url("../assets/images/page/home/people.png");
+      background-position: bottom 0 right 0;
+      background-repeat: no-repeat;
+    }
+
+    picture {
+      @include breakpoint($breakpoint-laptop-big) {
+        height: 607px;
+      }
+
+      height: 740px;
+    }
   }
 
   &__info {
+    @include breakpoint($breakpoint-laptop-big) {
+      left: 54px;
+    }
+    @include breakpoint($breakpoint-notebook-big) {
+      top: 43px;
+      left: 21px;
+      width: 600px;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      width: 500px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      z-index: 10;
+      top: 38px;
+      left: 15px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      right: 15px;
+      width: auto;
+    }
+
     position: absolute;
-    top: 30%;
+    top: 142px;
     left: 160px;
     width: 700px;
 
     .button {
       margin-top: 39px;
+      padding: 17px 38px;
     }
   }
 
   &__title {
+    @include breakpoint($breakpoint-notebook-big) {
+      font-size: 48px;
+      line-height: 53px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 40px;
+      line-height: 43px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 30px;
+      line-height: 33px;
+    }
+
     padding-bottom: 22px;
     color: $color-text__white;
     font-weight: 700;
@@ -34,9 +102,12 @@
   }
 
   &__text {
+    @include breakpoint($breakpoint-mobile) {
+      line-height: 25px;
+    }
+
     color: $color-text__white;
     font-size: 20px;
     line-height: 29.6px;
   }
-
 }
