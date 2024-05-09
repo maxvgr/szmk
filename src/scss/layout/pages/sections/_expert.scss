@@ -5,21 +5,48 @@
   }
 
   &__wrapper {
+    @include breakpoint($breakpoint-notebook-big) {
+      padding: 67px 57px;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 67px 24px;
+      background-image: url("../assets/images/page/home/bg-list.png");
+      background-position: top 10% right 10%;
+      background-repeat: no-repeat;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      gap: 28px;
+      padding: 40px 16px;
+      background-image: none;
+    }
+
     position: relative;
     z-index: 15;
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 0.8fr 1.2fr;
     gap: 56px;
     margin-top: -50px;
     padding: 88px 160px;
     border-radius: 50px 50px 0 0;
     background-color: $palette-white;
-    background-image:  url('../assets/images/page/home/bg-list.png'), url('../assets/images/page/home/blue-bubl.png');
+    background-image: url("../assets/images/page/home/bg-list.png"), url("../assets/images/page/home/blue-bubl.png");
     background-position: bottom 0 left 40%, top -250px right 0;
     background-repeat: no-repeat, no-repeat;
   }
 
   &__title {
+    @include breakpoint($breakpoint-notebook) {
+      font-size: 32px;
+      line-height: 38px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+    }
+
     padding-bottom: 20px;
     color: $color-text__blue;
     font-weight: 400;
@@ -33,12 +60,25 @@
   }
 
   &__table {
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
 
   &__item {
+    @include breakpoint($breakpoint-notebook) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding: 24px 40px 24px 26px;
+    }
+
     display: flex;
     align-items: center;
     padding: 36px 58px 36px 40px;
@@ -49,7 +89,7 @@
     line-height: 32.56px;
 
     &::before {
-      content: '';
+      content: "";
       width: 40px;
       height: 40px;
       padding-left: 60px;
@@ -59,25 +99,25 @@
 
     &:nth-child(1) {
       &::before {
-        background-image:  url('../assets/images/page/home/expert-item1.png');
+        background-image: url("../assets/images/page/home/expert-item1.png");
       }
     }
 
     &:nth-child(2) {
       &::before {
-        background-image:  url('../assets/images/page/home/expert-item2.png');
+        background-image: url("../assets/images/page/home/expert-item2.png");
       }
     }
 
     &:nth-child(3) {
       &::before {
-        background-image:  url('../assets/images/page/home/expert-item3.png');
+        background-image: url("../assets/images/page/home/expert-item3.png");
       }
     }
 
     &:nth-child(4) {
       &::before {
-        background-image:  url('../assets/images/page/home/expert-item4.png');
+        background-image: url("../assets/images/page/home/expert-item4.png");
       }
     }
   }
