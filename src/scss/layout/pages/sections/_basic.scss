@@ -5,35 +5,77 @@
   }
 
   &__wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      padding: 0 21px 107px;
+    }
+
     position: relative;
     z-index: 10;
     margin-top: -75px;
     padding: 0 47px 155px;
     border-radius: 50px 50px 0 0;
-    background:  rgba(243, 244, 247, 1) url('../assets/images/page/home/bubles.png') no-repeat;
+    background: rgba(243, 244, 247, 1) url("../assets/images/page/home/bubles.png") no-repeat;
   }
 
-  &__title {
+  &__title, h2 {
+    @include breakpoint($breakpoint-notebook) {
+      padding-top: 57px;
+      font-size: 40px;
+      line-height: 45px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding: 42px 0;
+      font-size: 32px;
+      line-height: 36px;
+    }
+
     padding-top: 78px;
     padding-bottom: 50px;
   }
 
   &-working {
+    @include breakpoint($breakpoint-laptop-big) {
+      gap: 69px 20px;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px 20px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+      gap: 26px;
+    }
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 93px 20px;
 
     &__item {
+      @include breakpoint($breakpoint-tablet) {
+        gap: 20px;
+      }
+
       display: flex;
       gap: 18px;
 
-
       &:last-child {
+        @include breakpoint($breakpoint-notebook) {
+          grid-column: 1/4;
+        }
+        @include breakpoint($breakpoint-tablet) {
+          grid-column: 1/2;
+        }
+
         grid-column: 3/5;
       }
     }
 
     &__title {
+      @include breakpoint($breakpoint-notebook) {
+        font-size: 32px;
+        line-height: 36px;
+      }
+
       color: $link-hover-color;
       font-weight: 700;
       font-size: 36px;
@@ -43,8 +85,14 @@
     }
 
     &__text {
+      @include breakpoint($breakpoint-notebook) {
+        font-size: 18px;
+        line-height: 21px;
+      }
+
       padding-top: 8px;
       font-weight: 400;
+      font-size: 20px;
       line-height: 23.6px;
     }
   }
