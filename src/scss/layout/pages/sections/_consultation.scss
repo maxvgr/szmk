@@ -5,6 +5,26 @@
   }
 
   &__wrapper {
+    @include breakpoint($breakpoint-desktop) {
+      padding: 64px;
+      background-position: bottom 50px left 63%, bottom 0 right 0, bottom 0 right -120px;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      padding: 46px 150px 50px 20px;
+      // border-radius: 0;
+
+      background-image: url("../assets/images/page/home/bg-green-list.png");
+      background-position: bottom 0 left 53%;
+      background-repeat: no-repeat;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding: 40px 20px;
+      background-image: none;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding: 35px 15px;
+    }
+
     position: relative;
     z-index: 10;
     margin-top: -50px;
@@ -19,6 +39,21 @@
     color: $color-text__white;
 
     &::after {
+      @include breakpoint($breakpoint-desktop) {
+        left: 70%;
+      }
+      @include breakpoint($breakpoint-notebook) {
+        right: 0;
+        left: inherit;
+        width: 277px;
+        height: 602px;
+        background-image: url("../assets/images/page/home/consult-768.png");
+        background-position: bottom 0 right 0;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        background-image: none;
+      }
+
       content: "";
       position: absolute;
       z-index: 20;
@@ -34,12 +69,28 @@
 
   &__title,
   h2 {
+    @include breakpoint($breakpoint-notebook) {
+      font-size: 32px;
+      line-height: 36.48px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      text-align: center;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 24px;
+      line-height: 27px;
+    }
+
     padding-bottom: 12px;
     color: $color-text__white;
     text-align: left;
   }
 
   &__form {
+    @include breakpoint($breakpoint-tablet) {
+      width: 100%;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -51,15 +102,27 @@
     }
 
     .button {
+      @include breakpoint($breakpoint-tablet) {
+        width: 100%;
+      }
+
       padding: 17px 38px;
     }
   }
 
   &__text {
+    @include breakpoint($breakpoint-tablet) {
+      text-align: center;
+    }
+
     padding-bottom: 18px;
   }
 
   &__soglasie {
+    @include breakpoint($breakpoint-tablet) {
+      text-align: center;
+    }
+
     a {
       text-decoration: underline;
       transition: $transition-time ease;

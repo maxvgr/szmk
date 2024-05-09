@@ -5,6 +5,23 @@
   }
 
   &__wrapper {
+    @include breakpoint($breakpoint-laptop) {
+      padding: 88px 50px 50px;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      background-image: url("../assets/images/page/home/yellow-bubl.png");
+      background-position: bottom 0 left 30%;
+      background-repeat: no-repeat;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding: 88px 17px 50px;
+      background-position: top 30% left 30%;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding: 88px 12px 50px;
+      background-image: none;
+    }
+
     position: relative;
     z-index: 1;
     margin-top: -50px;
@@ -16,13 +33,35 @@
     background-repeat: no-repeat, no-repeat;
   }
 
-  &__title {
+  &__title, h2 {
+    @include breakpoint($breakpoint-notebook) {
+      padding-bottom: 43px;
+      font-size: 32px;
+      line-height: 36px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding-bottom: 30px;
+      font-size: 24px;
+      line-height: 27px;
+    }
+
     padding-bottom: 67px;
   }
 
   &__table {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint($breakpoint-mobile) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 33px;
   }
 
@@ -30,7 +69,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
 
     p {
       text-align: center;
@@ -38,6 +77,15 @@
   }
 
   &__number {
+    @include breakpoint($breakpoint-laptop) {
+      font-size: 60px;
+      line-height: 70px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
     color: $color-text__blue;
     font-size: 72px;
     line-height: 84.96px;
@@ -52,5 +100,9 @@
     display: flex;
     justify-content: center;
     padding: 39px 0 50px;
+
+    .button {
+      padding: 17px 38px;
+    }
   }
 }
