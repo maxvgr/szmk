@@ -9,12 +9,13 @@
       padding: 88px 50px 50px;
     }
     @include breakpoint($breakpoint-notebook) {
+      padding: 88px 50px 100px;
       background-image: url("../assets/images/page/home/yellow-bubl.png");
       background-position: bottom 0 left 30%;
       background-repeat: no-repeat;
     }
     @include breakpoint($breakpoint-tablet) {
-      padding: 88px 17px 50px;
+      padding: 88px 17px 100px;
       background-position: top 30% left 30%;
     }
     @include breakpoint($breakpoint-mobile) {
@@ -73,6 +74,15 @@
 
     p {
       text-align: center;
+    }
+
+    &--button {
+      @include breakpoint($breakpoint-notebook) {
+        grid-column: auto;
+      }
+
+      grid-column: 1/6;
+      justify-content: center;
     }
   }
 
