@@ -1,6 +1,9 @@
 /* Прописываются все инициализации и первичные параметры для скриптов */
 
 import LazyLoad from 'vanilla-lazyload';
+import MicroModal from 'micromodal';
+
+// var MicroModal = require('micromodal');
 
 export const lazyImageController = new LazyLoad({
   elements_selector: '.lazy__item',
@@ -14,3 +17,5 @@ export const lazyImageController = new LazyLoad({
 export const lazyBackgroundController = new LazyLoad({
   elements_selector: '.lazy-bg',
 });
+
+MicroModal.init();

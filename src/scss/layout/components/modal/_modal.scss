@@ -52,20 +52,50 @@
   }
 
   &__container {
+    @include breakpoint($breakpoint-mobile) {
+      width: auto;
+      padding: 10px;
+    }
+
     position: relative;
+    width: 600px;
+    padding: 75px 95px;
+    background-color: rgba(243, 244, 247, 1);
+    background-image: url("../assets/images/page/home/yellow-bubl.png"), url("../assets/images/page/home/blue-bubl.png");
+    background-position: bottom -550px left -100px, top -450px right -250px;
+    background-repeat: no-repeat, no-repeat;
+
   }
 
   &__header {
+    text-align: center;
   }
 
   &__title {
+    color: rgba(15, 130, 152, 1);
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40.12px;
+    text-align: center;
+  }
+
+  &__text {
+    display: block;
+    padding: 11px 0 23px;
+    font-size: 18px;
+    line-height: 25.74px;
   }
 
   &__close {
+    @include breakpoint($breakpoint-mobile) {
+      top: 0;
+      right: 0;
+    }
+
     position: absolute;
     z-index: 3;
-    top: 10px;
-    right: 5px;
+    top: 24px;
+    right: 25px;
 
     border: none;
     outline: none;
@@ -82,11 +112,42 @@
     }
 
     &::before {
-      content: url("../img/icons/control/modal__close.svg");
+      content: url("../images/global/modal__close.svg");
     }
   }
 
   &__content {
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      .input {
+        width: 100%;
+      }
+
+      &__agree {
+        font-size: 12px;
+        line-height: 16.32px;
+        text-align: center;
+
+        a {
+          text-decoration: underline;
+          transition: $transition-time ease;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .button {
+        align-self: center;
+        padding: 23px 90px;
+        font-size: 16px;
+        line-height: 19.2px;
+      }
+    }
   }
 }
 
