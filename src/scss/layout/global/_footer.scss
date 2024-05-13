@@ -8,6 +8,9 @@
       max-width: 100%;
       padding: 35px 50px 15px;
     }
+    @include breakpoint($breakpoint-tablet) {
+      padding: 35px 20px 20px;
+    }
 
     max-width: 1600px;
     padding: 37px 100px 37px 0;
@@ -19,6 +22,10 @@
     @include breakpoint($breakpoint-notebook) {
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 18px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 18px;
     }
 
     display: grid;
@@ -42,6 +49,10 @@
     @include breakpoint($breakpoint-notebook) {
       grid-row: 1/3;
     }
+    @include breakpoint($breakpoint-mobile) {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
 
     grid-row: 1/6;
   }
@@ -51,11 +62,21 @@
       grid-row: 1/4;
       grid-column: 3/4;
     }
+    @include breakpoint($breakpoint-mobile) {
+      grid-row: 1/3;
+      grid-column: 2/3;
+    }
 
     grid-row: 1/6;
   }
 
   &__phone {
+    @include breakpoint($breakpoint-mobile) {
+      grid-row: auto;
+      grid-column: 1/3;
+      justify-self: center;
+    }
+
     align-self: center;
   }
 
@@ -64,6 +85,11 @@
       grid-row: auto;
       grid-column: auto;
       align-self: center;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      grid-row: auto;
+      grid-column: 1/3;
+      justify-self: center;
     }
 
     grid-column: 4/5;
@@ -75,6 +101,11 @@
       grid-column: 1/2;
       align-self: center;
     }
+    @include breakpoint($breakpoint-mobile) {
+      grid-row: auto;
+      grid-column: 1/3;
+      justify-self: center;
+    }
   }
 
   &__social {
@@ -82,6 +113,11 @@
       grid-row: auto;
       grid-column: 2/3;
       align-self: center;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      grid-row: auto;
+      grid-column: 1/3;
+      justify-self: center;
     }
 
     display: flex;
@@ -95,6 +131,11 @@
       grid-row: 2/3;
       grid-column: 1/2;
       padding-top: 0;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      grid-row: auto;
+      grid-column: 1/3;
+      text-align: center;
     }
 
     grid-row: 5/6;
