@@ -1,0 +1,202 @@
+.page-about {
+  overflow-x: hidden;
+  margin: 0;
+  background-color:  rgba(243, 244, 247, 1);
+}
+
+#page-about {
+  .about {
+    .container {
+      @include breakpoint($breakpoint-laptop) {
+        padding: 10px 50px 100px;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        padding: 10px 20px 100px;
+      }
+
+      position: relative;
+      max-width: 1920px;
+      margin-bottom: -50px;
+      padding: 0 160px 130px;
+      border-radius: 50px 50px 0 0;
+      background-color: $palette-white;
+      background-image: url("../assets/images/page/home/bg-list.png");
+      background-position: bottom 50px left 50%;
+      background-repeat: no-repeat;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 5%;
+        left: 5%;
+        width: 255px;
+        height: 255px;
+        border-radius: 50%;
+        background-color: rgba(255, 240, 195, 0.3);
+        opacity: 0.3;
+      }
+    }
+
+    &__title {
+      position: relative;
+      z-index: 1;
+      padding-top: 26px;
+      padding-bottom: 19px;
+    }
+
+    &__info {
+      @include breakpoint($breakpoint-tablet) {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 72px;
+      font-size: 18px;
+      line-height: 25.74px;
+
+      p {
+        padding-bottom: 15px;
+      }
+    }
+
+    &__text {
+      @include breakpoint($breakpoint-tablet) {
+        grid-row: 2/3;
+      }
+    }
+  }
+
+  .advantages {
+    .container {
+      max-width: 1920px;
+      padding: 0;
+    }
+
+    &__wrapper {
+      // @include breakpoint($breakpoint-notebook-big) {
+      //   padding: 67px 57px;
+      // }
+      @include breakpoint($breakpoint-notebook) {
+        padding: 67px 24px 200px;
+        background-image: url("../assets/images/page/home/bg-list.png");
+        background-position: top 10% right 10%;
+        background-repeat: no-repeat;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        padding: 30px 16px 200px;
+        background-image: none;
+      }
+
+      position: relative;
+      z-index: 1;
+      padding: 53px 160px 200px;
+      border-radius: 50px 50px 0 0;
+      background-color: rgba(243, 244, 247, 1);
+      background-image: url("../assets/images/page/home/blue-bubl.png");
+      background-position: top -250px right 0;
+      background-repeat: no-repeat;
+    }
+
+    &__title {
+      @include breakpoint($breakpoint-notebook) {
+        font-size: 32px;
+        line-height: 38px;
+      }
+      @include breakpoint($breakpoint-mobile) {
+        font-size: 24px;
+        line-height: 28px;
+        // text-align: center;
+      }
+
+      padding-bottom: 20px;
+      font-weight: 700;
+      font-size: 42px;
+      font-family: $font-title;
+      line-height: 48px;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 25.74px;
+    }
+
+    &__table {
+      @include breakpoint($breakpoint-laptop-big) {
+        grid-template-columns: 1fr 1fr;
+        // gap: 10px;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    &__item {
+      @include breakpoint($breakpoint-notebook) {
+        font-size: 20px;
+        line-height: 26px;
+      }
+      @include breakpoint($breakpoint-mobile) {
+        padding: 24px 40px 24px 26px;
+      }
+
+      display: flex;
+      align-items: center;
+      padding: 36px 58px 36px 40px;
+      border: 1px solid rgba(223, 223, 223, 1);
+      border-radius: 10px;
+      background-color: $palette-white;
+      font-size: 22px;
+      line-height: 32.56px;
+
+      &::before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        padding-left: 60px;
+        background-position: top 0 left 0;
+        background-repeat: no-repeat;
+      }
+
+      &:nth-child(1) {
+        &::before {
+          background-image: url("../assets/images/page/home/expert-item1.png");
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          background-image: url("../assets/images/page/home/expert-item2.png");
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          background-image: url("../assets/images/page/home/expert-item3.png");
+        }
+      }
+
+      &:nth-child(4) {
+        &::before {
+          background-image: url("../assets/images/page/home/expert-item4.png");
+        }
+      }
+    }
+  }
+
+  .callback__wrapper {
+    margin-top: -150px;
+    margin-bottom: -100px;
+  }
+}

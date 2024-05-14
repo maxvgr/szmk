@@ -32,6 +32,11 @@
     background-image: url("../assets/images/page/home/yellow-bubl.png"), url("../assets/images/page/home/blue-bubl.png");
     background-position: bottom -450px left 10%, top -250px right 0;
     background-repeat: no-repeat, no-repeat;
+
+    &--about {
+      padding-top: 158px;
+      background-color: $palette-white;
+    }
   }
 
   &__title, h2 {

@@ -46,4 +46,36 @@
       white-space: wrap;
     }
   }
+
+  &--breadcrumb {
+    padding-top: 28px;
+
+    .nav__list {
+      justify-content: flex-start;
+    }
+
+    .nav__item {
+      position: relative;
+      line-height: 22.88px;
+
+      &:not(:first-child) {
+        padding-left: 25px;
+
+        &::before {
+          content: url("../assets/images/global/breadcrumb.svg");
+          position: absolute;
+
+          top: -4px;
+          left: -20px;
+          width: 31px;
+
+          margin-right: 6px;
+        }
+      }
+    }
+
+    span.nav__link {
+      color: $color-text__grey;
+    }
+  }
 }
