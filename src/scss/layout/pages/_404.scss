@@ -1,0 +1,61 @@
+#page-about {
+  .error {
+    .container {
+        @include breakpoint($breakpoint-laptop) {
+          padding: 10px 50px 50px;
+        }
+        @include breakpoint($breakpoint-tablet) {
+          padding: 10px 20px 30px;
+        }
+
+      position: relative;
+      max-width: 1920px;
+      margin-bottom: 0;
+      padding: 0 160px 50px;
+      border-radius: 50px 50px 0 0;
+      background-color: $palette-white;
+      background-image: url("../assets/images/page/services/bg-yellow.png");
+      background-position: top -50px left 0;
+      background-repeat: no-repeat;
+    }
+
+    &__title {
+      padding: 26px 0 20px;
+      color: $color-text__blue;
+      font-weight: 700;
+      font-size: 130px;
+      line-height: 148.2px;
+      letter-spacing: 0.03em;
+    }
+
+    &__info {
+      @include breakpoint($breakpoint-tablet) {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 130px;
+    }
+
+    &__bold {
+      padding-bottom: 14px;
+      font-weight: 700;
+      font-size: 28px;
+      font-family: $font-title;
+      line-height: 31.92px;
+      letter-spacing: 0.03em;
+    }
+
+    &__img {
+      picture {
+        max-height: 400px;
+
+        img {
+          width: auto;
+        }
+      }
+    }
+  }
+}

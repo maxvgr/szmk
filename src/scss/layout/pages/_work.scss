@@ -1,7 +1,9 @@
 #page-about {
   .work {
     .services__wrapper {
-      padding-bottom: 50px;
+      position: relative;
+      margin-bottom: -50px;
+      padding-bottom: 100px;
     }
   }
 

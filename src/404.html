@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<include src="layout/global/head.html"></include>
+
+<body class="page-about">
+  <include src="layout/global/header.html"></include>
+
+  <main>
+    <div id="page-about" class="page__body">
+      <section class="section about error">
+        <div class="container">
+          <div class="page__breadcrumbs">
+            <nav class="nav nav--breadcrumb">
+              <ol class="nav__list">
+                <li class="nav__item">
+                  <a href="/" class="nav__link" title="Главная">
+                    <span>Главная</span>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <span class="nav__link">404</span>
+                </li>
+              </ol>
+            </nav>
+          </div>
+           <!-- /.page__breadcrumbs -->
+
+           <div class="error__info">
+            <div class="errort__text">
+              <h1 class="error__title">404</h1>
+              <p class="error__bold">Упс, что-то пошло не так</p>
+              <p>Запрашиваемая страница не найдена. Попробуйте вернуться назад или перейдите на главную</p>
+            </div>
+            <!-- /.about__text -->
+            <div class="error__img">
+              <picture class="lazy">
+                <img alt="" class="image image--cover lazy__item"
+                  data-src="assets/images/page/error/404.jpg">
+              </picture>
+            </div>
+            <!-- /.about__img -->
+           </div>
+           <!-- /.about__info -->
+        </div>
+        <!-- /.container -->
+      </section>
+    </div>
+    <!-- /.page__body -->
+  </main>
+
+  <include src="layout/global/footer.html"></include>
+</body>
+
+</html>
