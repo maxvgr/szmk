@@ -1,0 +1,22 @@
+.faq {
+  .services__wrapper {
+    background-image: url("../assets/images/page/services/bg-yellow.png");
+    background-position: top -50px left 0;
+    background-repeat: no-repeat;
+  }
+
+  &__question {
+    padding-bottom: 13px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28.6px;
+
+    &:not(:first-child) {
+      padding-top: 33px;
+    }
+  }
+
+  &__answer {
+    line-height: 22.88px;
+  }
+}
