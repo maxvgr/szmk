@@ -1,0 +1,44 @@
+.contacts {
+  .services__wrapper {
+    position: relative;
+    margin-bottom: -50px;
+    background-image: url("../assets/images/page/services/bg-yellow.png");
+    background-position: top -50px left 0;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    padding: 26px 0 19px;
+  }
+
+  &__info {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    span {
+      color: $color-text__grey;
+
+      &:not(:first-child) {
+        padding-top: 25px;
+      }
+    }
+
+
+  }
+
+  &__social {
+    display: flex;
+    gap: 13px;
+  }
+}
