@@ -1,0 +1,26 @@
+.our-works {
+  overflow-x: hidden;
+  margin: 0;
+
+  .services__wrapper {
+    @include breakpoint($breakpoint-laptop) {
+      padding: 0 50px 100px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding: 0 20px 100px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding: 0 15px 100px;
+    }
+
+    padding: 0 160px 100px;
+  }
+
+  .callback__wrapper {
+    margin: -40px 0 -150px;
+  }
+
+  .footer__wrapper {
+    padding-top: 160px;
+  }
+}
