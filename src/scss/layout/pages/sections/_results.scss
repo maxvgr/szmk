@@ -6,27 +6,29 @@
 
   &__wrapper {
     @include breakpoint($breakpoint-laptop) {
-      padding: 88px 50px 50px;
+      padding: 248px 50px 50px;
     }
     @include breakpoint($breakpoint-notebook) {
-      padding: 88px 50px 100px;
+      padding: 388px 50px 100px;
       background-image: url("../assets/images/page/home/yellow-bubl.png");
       background-position: bottom 0 left 30%;
       background-repeat: no-repeat;
     }
     @include breakpoint($breakpoint-tablet) {
-      padding: 88px 17px 100px;
+      padding: 428px 17px 100px;
       background-position: top 30% left 30%;
     }
     @include breakpoint($breakpoint-mobile) {
-      padding: 88px 12px 50px;
+      margin-top: -50px;
+      padding: 60px 12px 50px;
       background-image: none;
     }
 
     position: relative;
     z-index: 1;
-    margin-top: -50px;
-    padding: 88px 160px 50px;
+    // margin-top: -50px;
+
+    padding: 248px 160px 50px;
     border-radius: 50px 50px 0 0;
     background-color: rgba(243, 244, 247, 1);
     background-image: url("../assets/images/page/home/yellow-bubl.png"), url("../assets/images/page/home/blue-bubl.png");

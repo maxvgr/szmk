@@ -1,4 +1,11 @@
 .callback {
+  @include breakpoint($breakpoint-mobile) {
+    height: auto;
+  }
+
+  height: 0;
+  background-color: $palette-white;
+
   .container {
     @include breakpoint($breakpoint-laptop) {
       padding: 0 50px;

@@ -13,7 +13,12 @@
       padding: 0 15px 100px;
     }
 
+    position: relative;
     padding: 0 160px 100px;
+  }
+
+  .section.callback {
+    height: auto;
   }
 
   .callback__wrapper {
