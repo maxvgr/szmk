@@ -3,8 +3,6 @@
 import LazyLoad from 'vanilla-lazyload';
 import MicroModal from 'micromodal';
 
-// var MicroModal = require('micromodal');
-
 export const lazyImageController = new LazyLoad({
   elements_selector: '.lazy__item',
 
