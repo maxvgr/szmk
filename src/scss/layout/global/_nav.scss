@@ -51,6 +51,7 @@
     padding-top: 28px;
 
     .nav__list {
+      gap: 0 15px;
       justify-content: flex-start;
     }
 
@@ -59,14 +60,14 @@
       line-height: 22.88px;
 
       &:not(:first-child) {
-        padding-left: 25px;
+        padding-left: 45px;
 
         &::before {
           content: url("../assets/images/global/breadcrumb.svg");
           position: absolute;
 
           top: -4px;
-          left: -20px;
+          left: 0;
           width: 31px;
 
           margin-right: 6px;
