@@ -1,0 +1,69 @@
+.photo-gallery {
+  .services__wrapper {
+    background-image: url("../assets/images/page/services/bg-yellow.png");
+    background-position: top -50px left 0;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    padding: 26px 0 19px;
+  }
+
+  &__list {
+    @include breakpoint($breakpoint-laptop-big) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 34px 20px;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 45px 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 420px;
+    transition: $transition-time ease;
+
+    picture {
+      overflow: hidden;
+      width: 100%;
+      height: 352px;
+    }
+
+    &:hover {
+      // box-shadow: 5px 4px 15px 0 rgba(15, 130, 152, 0.2);
+
+      .photo-gallery__text {
+        color: $color-text__yellow;
+      }
+    }
+  }
+
+  &__text {
+    @include breakpoint($breakpoint-desktop) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    align-content: center;
+    height: 96px;
+    padding: 2px 10px;
+    font-size: 22px;
+    line-height: 23px;
+    text-align: center;
+    transition: $transition-time ease;
+  }
+}
