@@ -44,6 +44,10 @@
 
   &__copyright {
     padding-top: 39px;
+
+    br {
+      display: none;
+    }
   }
 
   &__menu {
