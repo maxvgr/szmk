@@ -195,5 +195,11 @@
 
   .section.results {
     background-color: none;
+
+    .results__wrapper {
+      margin-top: 50px;
+      padding-top: 158px;
+      background-color: $palette-white;
+    }
   }
 }

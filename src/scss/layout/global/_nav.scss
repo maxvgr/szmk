@@ -10,13 +10,18 @@
     justify-content: center;
   }
 
+  .current-menu-item > a {
+    color: $link-hover-color;
+  }
+
   &__item {
     &.current > a {
       color: $link-hover-color;
     }
   }
 
-  &__link {
+  &__link,
+  .menu-item > a {
     white-space: nowrap;
     transition: $transition-time ease;
 
