@@ -21,3 +21,14 @@ body {
     overflow: clip;
   }
 }
+
+.pagination {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 10px;
+}
+
+.page_wrapper > .search {
+  padding: 10px 0;
+}

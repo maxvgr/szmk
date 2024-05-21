@@ -1,6 +1,7 @@
 const hamburger = document.querySelector(".hamburger--spin");
 const mobileNavs = document.querySelector(".header__menu-mobile");
 const overlay = document.querySelector(".header__menu-mobile--overlay");
+const searchbtn = document.querySelector(".search__button");
 const search = document.querySelector(".header__search");
 
 
@@ -11,6 +12,6 @@ hamburger.addEventListener("click", () => {
   overlay.classList.toggle("is-active");
 });
 
-search.addEventListener("click", () => {
+searchbtn.addEventListener("click", () => {
   search.classList.toggle("is-active");
 });
