@@ -59,7 +59,8 @@
 
     position: relative;
     width: 600px;
-    padding: 75px 95px;
+    // padding: 75px 95px;
+
     background-color: rgba(243, 244, 247, 1);
     background-image: url("../assets/images/page/home/yellow-bubl.png"), url("../assets/images/page/home/blue-bubl.png");
     background-position: bottom -550px left -100px, top -450px right -250px;
@@ -68,6 +69,7 @@
   }
 
   &__header {
+    padding: 75px 95px 0;
     text-align: center;
   }
 
@@ -117,6 +119,8 @@
   }
 
   &__content {
+    padding: 0 95px 75px;
+
     .modal-form {
       display: flex;
       flex-direction: column;
