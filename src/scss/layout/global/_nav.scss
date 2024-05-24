@@ -61,6 +61,10 @@
     }
 
     .nav__item {
+      @include breakpoint($breakpoint-mobile) {
+        font-size: 13px;
+      }
+
       position: relative;
       line-height: 22.88px;
 
