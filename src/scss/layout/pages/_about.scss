@@ -55,6 +55,19 @@
       @include breakpoint($breakpoint-tablet) {
         grid-row: 2/3;
       }
+
+        a {
+          text-decoration: underline;
+          transition: $transition-time ease;
+
+          &:hover {
+            color: $color-text__yellow;
+            text-decoration: none;
+          }
+        }
+
+
+
     }
   }
 
@@ -113,6 +126,15 @@
     &__text {
       font-size: 18px;
       line-height: 25.74px;
+
+      a {
+        text-decoration: underline;
+        transition: $transition-time ease;
+
+        &:hover {
+          color: $color-text__yellow;
+        }
+      }
     }
 
     &__table {
