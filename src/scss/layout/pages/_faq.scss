@@ -5,6 +5,33 @@
     background-repeat: no-repeat;
   }
 
+  &__wrapper {
+    .ac {
+      border: none;
+      background-color: transparent;
+
+      .ac-trigger {
+        padding: 0;
+        color: $color-text__primary;
+        font-weight: 500;
+        font-size: 20px;
+        font-family: $font-default;
+        line-height: 28.6px;
+
+        &:not(:first-child) {
+          padding-top: 33px;
+        }
+      }
+
+      .ac-panel .ac-text {
+        color: $color-text__primary;
+        font-size: 16px;
+        font-family: $font-default;
+        line-height: 22.88px;
+      }
+    }
+  }
+
   &__question {
     padding-bottom: 13px;
     font-weight: 500;

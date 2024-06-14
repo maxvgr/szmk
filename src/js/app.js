@@ -6,5 +6,6 @@ import './layout/menu';
 
 import './layout/page/home';
 import './layout/page/gallery';
+import './layout/page/faq';
 
 import './component/form';
