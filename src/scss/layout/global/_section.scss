@@ -37,4 +37,11 @@
     letter-spacing: 0.03em;
     text-align: center;
   }
+
+  &__text {
+    ul {
+      padding-left: 30px;
+      list-style: disc;
+    }
+  }
 }

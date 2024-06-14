@@ -58,16 +58,16 @@
       display: flex;
       gap: 18px;
 
-      &:last-child {
-        @include breakpoint($breakpoint-notebook) {
-          grid-column: 1/4;
-        }
-        @include breakpoint($breakpoint-tablet) {
-          grid-column: 1/2;
-        }
+      // &:last-child {
+      //   @include breakpoint($breakpoint-notebook) {
+      //     grid-column: 1/4;
+      //   }
+      //   @include breakpoint($breakpoint-tablet) {
+      //     grid-column: 1/2;
+      //   }
 
-        grid-column: 3/5;
-      }
+      //   grid-column: 3/5;
+      // }
     }
 
     &__title {

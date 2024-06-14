@@ -23,10 +23,10 @@
 .header {
   &__wrapper {
     @include breakpoint($breakpoint-laptop) {
-      grid-template-columns: 2.2fr 3.8fr 70px 1fr;
+      grid-template-columns: 2.2fr 3.8fr 70px 1.5fr;
     }
     @include breakpoint($breakpoint-notebook) {
-      grid-template-columns: 3fr 70px 1fr 70px;
+      grid-template-columns: 3fr 70px 1.4fr 70px;
     }
     @include breakpoint($breakpoint-tablet) {
       grid-template-columns: 3fr 70px 70px;
@@ -37,7 +37,7 @@
 
     position: relative;
     display: grid;
-    grid-template-columns: 1.6fr 4fr 70px 1fr;
+    grid-template-columns: 1.6fr 4fr 70px 1.5fr;
     align-items: center;
   }
 
@@ -166,6 +166,26 @@
     gap: 6px;
     align-items: center;
     justify-self: right;
+  }
+
+  .header-contacts__wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__phone {
+    white-space: nowrap;
+  }
+
+  &__social {
+    display: flex;
+    gap: 5px;
+
+    img {
+      width: 25px;
+      height: auto;
+    }
   }
 
   &__menu-mobile {
