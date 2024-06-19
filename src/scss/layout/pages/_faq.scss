@@ -11,7 +11,7 @@
       background-color: transparent;
 
       .ac-trigger {
-        padding: 0;
+        padding: 0 0 0 46px;
         color: $color-text__primary;
         font-weight: 500;
         font-size: 20px;
@@ -21,13 +21,49 @@
         &:not(:first-child) {
           padding-top: 33px;
         }
+
+        &::after {
+          display: none;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 26px;
+          height: 14px;
+          background-image: url("../assets/images/page/faq/arrow.svg");
+          background-position: top 0 left 0;
+          background-repeat: no-repeat;
+          -webkit-transform: translate(0,-50%);
+          transform: translate(0,-50%);
+          transition: $transition-time ease;
+        }
       }
 
-      .ac-panel .ac-text {
-        color: $color-text__primary;
-        font-size: 16px;
-        font-family: $font-default;
-        line-height: 22.88px;
+      &.is-active {
+        .ac-trigger {
+          &::before {
+            top: calc(50% - 7px);
+            transform: scale(-1, -1);
+          }
+        }
+      }
+
+      .ac-panel {
+        .ac-text {
+          padding-left: 46px;
+          color: $color-text__primary;
+          font-size: 16px;
+          font-family: $font-default;
+          line-height: 22.88px;
+        }
+
+        ul {
+          padding-left: 66px;
+        }
+
       }
     }
   }
